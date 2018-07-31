@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>LoginPage.qml</file>
+    </qresource>
+</RCC>
