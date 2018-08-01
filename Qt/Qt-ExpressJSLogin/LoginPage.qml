@@ -186,6 +186,38 @@ ApplicationWindow{
         }
     }
 
+    Rectangle{
+        id: wrongTextBox
+        color: "transparent"
+        width: fillingBox.width / 3 * 2
+        height: 30
+        anchors.top: rememberMeBox.bottom
+        anchors.horizontalCenter: fillingBox.horizontalCenter
+        visible: false
+        Text{
+            color: "red"
+            font.pointSize: 15
+            text: "Incorrect id or password"
+            anchors.horizontalCenter: parent.horizontalCenter
+        }
+    }
+
+    Rectangle{
+        id: correctTextBox
+        color: "transparent"
+        width: fillingBox.width / 3 * 2
+        height: 30
+        anchors.top: rememberMeBox.bottom
+        anchors.horizontalCenter: fillingBox.horizontalCenter
+        visible: false
+        Text{
+            color: "green"
+            font.pointSize: 15
+            text: "correct"
+            anchors.horizontalCenter: parent.horizontalCenter
+        }
+    }
+
     //Login button Box
     Rectangle{
         anchors.top: rememberMeBox.bottom
@@ -199,7 +231,14 @@ ApplicationWindow{
             anchors.fill: parent
             text: "Login"
             onClicked: {
-                loginManager.loginCheck(userNameTextInput.text, passwordTextInput.text);
+                if(loginManager.loginCheck(userNameTextInput.text, passwordTextInput.text) === true){
+                    correctTextBox.visible = true;
+                    wrongTextBox.visible = false;
+                }
+                else{
+                    wrongTextBox.visible = true;
+                    correctTextBox.visible = false;
+                }
             }
         }
 
