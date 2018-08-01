@@ -9,7 +9,7 @@ router.get('/', function (req, res) {
 
 router.post('/requestLogin', function (req, res) {
     console.log("Login requested id: " + req.body.id + "Password: " + req.body.password);
-    res.render('index', { title: 'login request' });
+    res.send(JSON.stringify({ id: req.body.id, password: req.body.password }));
 })
 
 module.exports = router;
