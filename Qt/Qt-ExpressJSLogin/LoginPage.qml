@@ -198,6 +198,9 @@ ApplicationWindow{
         Button{
             anchors.fill: parent
             text: "Login"
+            onClicked: {
+                loginManager.loginCheck(userNameTextInput.text, passwordTextInput.text);
+            }
         }
 
     }
