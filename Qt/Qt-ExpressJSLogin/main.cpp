@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
     //make loginManager accessible from .QML files
     context->setContextProperty("loginManager",&loginManager);
 
+    //load .qml file and instantiate
     QQmlComponent component(&engine, QUrl(QStringLiteral("qrc:/LoginPage.qml")));
     QObject * window = component.create();
 
