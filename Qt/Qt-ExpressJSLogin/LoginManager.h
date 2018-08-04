@@ -1,6 +1,7 @@
 #ifndef LOGINMANAGER_H
 #define LOGINMANAGER_H
 #include <QObject>
+#include "loginrequester.h"
 
 
 class LoginManager : public QObject
@@ -10,11 +11,14 @@ class LoginManager : public QObject
 public:
     LoginManager();
 
+    void setLoginRequesterRef(LoginRequester * _loginRequester);
+
     Q_INVOKABLE void setLoginPageRef(QObject * _loginPage);
 
     Q_INVOKABLE bool loginCheck(QString id, QString password);
 private:
     QObject* loginPage;
+    LoginRequester * loginRequester;
 };
 
 #endif // LOGINMANAGER_H

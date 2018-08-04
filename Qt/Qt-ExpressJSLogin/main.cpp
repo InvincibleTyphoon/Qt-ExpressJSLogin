@@ -6,12 +6,15 @@
 #include <QObject>
 #include <QQmlComponent>
 #include "LoginManager.h"
+#include "loginrequester.h"
 
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
     LoginManager loginManager;
+    LoginRequester loginRequester;
+    loginManager.setLoginRequesterRef(&loginRequester);
 
     QQmlEngine engine;
     QQmlContext * context = engine.rootContext();

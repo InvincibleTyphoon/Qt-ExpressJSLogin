@@ -10,7 +10,10 @@ router.get('/', function (req, res) {
 // for login check
 router.post('/requestLogin', function (req, res) {
     console.log("Login requested id: " + req.body.id + "Password: " + req.body.password);
-    res.send(JSON.stringify({ id: req.body.id, password: req.body.password }));
+    if (req.body.id === "hello" && req.body.password === "world")
+        res.send(JSON.stringify({success: true}))
+    else
+        res.send(JSON.stringify({ success: false}))
 })
 
 module.exports = router;
