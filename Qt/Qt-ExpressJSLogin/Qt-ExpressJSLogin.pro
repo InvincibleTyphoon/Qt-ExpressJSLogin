@@ -28,11 +28,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
     LoginManager.cpp \
-    loginrequester.cpp
+    LoginRequester.cpp
 
 HEADERS += \
     LoginManager.h \
-    loginrequester.h
+    LoginRequester.h
 
 FORMS +=
 

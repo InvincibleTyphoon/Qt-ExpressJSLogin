@@ -6,7 +6,7 @@
 #include <QObject>
 #include <QQmlComponent>
 #include "LoginManager.h"
-#include "loginrequester.h"
+#include "LoginRequester.h"
 
 int main(int argc, char *argv[])
 {

@@ -1,4 +1,4 @@
-#include "loginrequester.h"
+#include "LoginRequester.h"
 #include <QEventLoop>
 #include <QJsonDocument>
 #include <QJsonArray>

@@ -1,7 +1,7 @@
 #ifndef LOGINMANAGER_H
 #define LOGINMANAGER_H
 #include <QObject>
-#include "loginrequester.h"
+#include "LoginRequester.h"
 
 
 class LoginManager : public QObject
