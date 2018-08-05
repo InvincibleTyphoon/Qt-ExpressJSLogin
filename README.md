@@ -24,7 +24,7 @@ This project is simple example that implements login functionality using Qt and 
 
 3. Result
 - on execution
-https://user-images.githubusercontent.com/25341053/43685661-1a508180-98f2-11e8-83bd-7479b435445e.PNG
+![login](https://user-images.githubusercontent.com/25341053/43685661-1a508180-98f2-11e8-83bd-7479b435445e.PNG)
 
 - login failure
 https://user-images.githubusercontent.com/25341053/43685693-9105bbb0-98f2-11e8-90e7-814f81f3254a.PNG
