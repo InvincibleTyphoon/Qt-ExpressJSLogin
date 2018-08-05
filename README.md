@@ -24,12 +24,15 @@ This project is simple example that implements login functionality using Qt and 
 
 3. Result
 - on execution
+
 ![login](https://user-images.githubusercontent.com/25341053/43685661-1a508180-98f2-11e8-83bd-7479b435445e.PNG)
 
 - login failure
-https://user-images.githubusercontent.com/25341053/43685693-9105bbb0-98f2-11e8-90e7-814f81f3254a.PNG
+
+![incorrect](https://user-images.githubusercontent.com/25341053/43685693-9105bbb0-98f2-11e8-90e7-814f81f3254a.PNG)
 
 - login success
-https://user-images.githubusercontent.com/25341053/43685707-02e4285c-98f3-11e8-9fed-184fe489754e.PNG
+
+![coorect](https://user-images.githubusercontent.com/25341053/43685707-02e4285c-98f3-11e8-9fed-184fe489754e.PNG)
 
 4. id/ password : hello/world
