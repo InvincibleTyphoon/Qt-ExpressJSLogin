@@ -6,7 +6,7 @@
 
 LoginRequester::LoginRequester()
 {
-    requestUrl = "http://localhost:1337/login/requestLogin";
+    requestUrl = "http://localhost:3000/login/requestLogin";
     manager = new QNetworkAccessManager();
 }
 
