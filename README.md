@@ -15,7 +15,9 @@ This project is simple example that implements login functionality using Qt and 
 - Install pre-compiled OpenSSL(1.0.2o) library and copy installed bin, lib, include folder to Qt's compiler folder 
  
   download link - https://slproweb.com/products/Win32OpenSSL.html
+  
   OpenSSL library may be installed in : C:\OpenSSL-Win32
+  
 - load .pro file with Qt Creator
 - Set proper compiler(in my case, msvc2015), run qmake and try run.
 
