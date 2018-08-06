@@ -14,10 +14,6 @@ ApplicationWindow{
 
     visible: true
 
-    Component.onCompleted: {
-        loginManager.setLoginPageRef(this);
-    }
-
     // transparent box filling whole window
     // it is for using anchor int other components
     // actually, you may use loginPagewindow.contentItem but, for comportance
