@@ -10,7 +10,7 @@ LoginRequester::LoginRequester()
     manager = new QNetworkAccessManager();
 }
 
-bool LoginRequester::requestLogin(QString& id, QString& password){
+bool LoginRequester::requestLogin(QString id, QString password){
     //for synchronous execution
     QEventLoop eventLoop;
     QByteArray postData;

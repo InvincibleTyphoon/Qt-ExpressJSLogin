@@ -9,7 +9,7 @@ class LoginRequester : public QObject
     Q_OBJECT
 public:
     LoginRequester();
-    bool requestLogin(QString& id, QString& password);
+    Q_INVOKABLE bool requestLogin(QString id, QString password);
 private:
     QNetworkAccessManager * manager;
     QNetworkRequest request;

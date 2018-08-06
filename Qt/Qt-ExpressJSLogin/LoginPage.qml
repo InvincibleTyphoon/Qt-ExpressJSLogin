@@ -231,7 +231,7 @@ ApplicationWindow{
             anchors.fill: parent
             text: "Login"
             onClicked: {
-                if(loginManager.loginCheck(userNameTextInput.text, passwordTextInput.text) === true){
+                if(loginRequester.requestLogin(userNameTextInput.text, passwordTextInput.text) === true){
                     correctTextBox.visible = true;
                     wrongTextBox.visible = false;
                 }

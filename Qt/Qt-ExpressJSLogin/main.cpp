@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
 
     //make loginManager accessible from .QML files
     context->setContextProperty("loginManager",&loginManager);
+    context->setContextProperty("loginRequester",&loginRequester);
 
     //load .qml file and instantiate
     QQmlComponent component(&engine, QUrl(QStringLiteral("qrc:/LoginPage.qml")));
