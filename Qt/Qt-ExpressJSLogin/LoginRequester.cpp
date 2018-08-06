@@ -21,6 +21,7 @@ bool LoginRequester::requestLogin(QString id, QString password){
     connect(manager,SIGNAL(finished(QNetworkReply*)), &eventLoop,SLOT(quit()));
 
     qDebug()<<"wait for answer";
+
     // wait for reply
     eventLoop.exec();
     qDebug()<<"Received answer";
