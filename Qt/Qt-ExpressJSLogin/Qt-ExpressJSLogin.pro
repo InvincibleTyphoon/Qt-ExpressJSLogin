@@ -30,7 +30,8 @@ SOURCES += \
     LoginRequester.cpp
 
 HEADERS += \
-    LoginRequester.h
+    LoginRequester.h \
+    protocoldefinition.h
 
 FORMS +=
 
