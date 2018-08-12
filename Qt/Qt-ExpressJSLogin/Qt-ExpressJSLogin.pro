@@ -27,11 +27,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-    LoginRequester.cpp
+    LoginRequester.cpp \
+    ResponseParser.cpp
 
 HEADERS += \
     LoginRequester.h \
-    protocoldefinition.h
+    protocoldefinition.h \
+    ResponseParser.h
 
 FORMS +=
 
