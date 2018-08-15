@@ -3,6 +3,7 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QNetworkReply>
+#include "protocoldefinition.h"
 
 
 class ResponseParser
@@ -10,7 +11,10 @@ class ResponseParser
 public:
     ResponseParser();
 
-    void processResponse(QNetworkReply reply);
+    void processResponse(QNetworkReply* reply);
+
+private:
+    void loginResponseReceived(QJsonObject& json);
 };
 
 #endif // RESPONSEPARSER_H
