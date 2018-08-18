@@ -11,13 +11,11 @@ int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
-    LoginRequester loginRequester;
-
     QQmlEngine engine;
     QQmlContext * context = engine.rootContext();
 
     //make loginManager accessible from .QML files
-    context->setContextProperty("loginRequester",&loginRequester);
+    context->setContextProperty("loginRequester",LoginRequester::getInstance());
 
     //load .qml file and instantiate
     QQmlComponent component(&engine, QUrl(QStringLiteral("qrc:/LoginPage.qml")));

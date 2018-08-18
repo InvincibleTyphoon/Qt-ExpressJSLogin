@@ -4,6 +4,12 @@
 #include <QJsonArray>
 #include <QJsonObject>
 
+LoginRequester* LoginRequester::instance = new LoginRequester();
+
+LoginRequester* LoginRequester::getInstance(){
+    return instance;
+}
+
 LoginRequester::LoginRequester()
 {
     requestUrl = "http://localhost:3000/login/requestLogin";
