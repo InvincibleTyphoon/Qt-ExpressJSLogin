@@ -1,4 +1,7 @@
-﻿'use strict';
+﻿//To do
+//1. Make login functionality not using directory
+
+'use strict';
 var debug = require('debug');
 var express = require('express');
 var path = require('path');

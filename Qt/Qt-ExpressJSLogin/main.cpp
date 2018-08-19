@@ -7,6 +7,9 @@
 #include <QQmlComponent>
 #include "LoginRequester.h"
 
+//Todo
+//1. Move processing response of login request functionlity to responseParser
+
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
