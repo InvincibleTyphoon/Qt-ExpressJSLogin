@@ -4,6 +4,7 @@
 #include <QJsonArray>
 #include <QJsonObject>
 
+//singletone pattern
 LoginRequester* LoginRequester::instance = new LoginRequester();
 
 LoginRequester* LoginRequester::getInstance(){

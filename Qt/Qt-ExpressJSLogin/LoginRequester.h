@@ -16,6 +16,8 @@ private:
     QNetworkRequest request;
     QNetworkReply * reply;
     QString requestUrl;
+
+    //singleton pattern
     LoginRequester();
     static LoginRequester * instance;
 };
