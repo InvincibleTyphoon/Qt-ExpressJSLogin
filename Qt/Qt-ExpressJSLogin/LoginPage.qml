@@ -14,6 +14,15 @@ ApplicationWindow{
 
     visible: true
 
+    function promptAMessage(message, color, timeOut){
+        promptMessageText.text = message;
+        promptMessageBox.visible = true;
+        promptMessageText.color = color;
+        promptMessageTimer.interval = timeOut;
+        promptMessageTimer.start();
+        console.log(message);
+    }
+
     // transparent box filling whole window
     // it is for using anchor int other components
     // actually, you may use loginPagewindow.contentItem but, for comportance
@@ -183,7 +192,7 @@ ApplicationWindow{
     }
 
     Rectangle{
-        id: wrongTextBox
+        id: promptMessageBox
         color: "transparent"
         width: fillingBox.width / 3 * 2
         height: 30
@@ -191,26 +200,17 @@ ApplicationWindow{
         anchors.horizontalCenter: fillingBox.horizontalCenter
         visible: false
         Text{
-            color: "red"
+            id: promptMessageText
             font.pointSize: 15
-            text: "Incorrect id or password"
             anchors.horizontalCenter: parent.horizontalCenter
         }
-    }
-
-    Rectangle{
-        id: correctTextBox
-        color: "transparent"
-        width: fillingBox.width / 3 * 2
-        height: 30
-        anchors.top: rememberMeBox.bottom
-        anchors.horizontalCenter: fillingBox.horizontalCenter
-        visible: false
-        Text{
-            color: "green"
-            font.pointSize: 15
-            text: "correct"
-            anchors.horizontalCenter: parent.horizontalCenter
+        Timer{
+            id: promptMessageTimer
+            interval: 1000
+            onTriggered: {
+                promptMessageBox.visible = false;
+                console.log("timer triggered");
+            }
         }
     }
 
@@ -227,13 +227,12 @@ ApplicationWindow{
             anchors.fill: parent
             text: "Login"
             onClicked: {
+                promptMessageBox.visible = false;
                 if(loginRequester.requestLogin(userNameTextInput.text, passwordTextInput.text) === true){
-                    correctTextBox.visible = true;
-                    wrongTextBox.visible = false;
+                    promptAMessage("login successful","green",3000);
                 }
                 else{
-                    wrongTextBox.visible = true;
-                    correctTextBox.visible = false;
+                    promptAMessage("id/password not correct","red",3000);
                 }
             }
         }
