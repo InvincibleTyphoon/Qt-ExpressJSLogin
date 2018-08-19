@@ -13,18 +13,24 @@ LoginRequester* LoginRequester::getInstance(){
 
 LoginRequester::LoginRequester()
 {
-    requestUrl = "http://localhost:3000/login/requestLogin";
+    serverUrl = "http://localhost:3000";
     manager = new QNetworkAccessManager();
 }
 
 bool LoginRequester::requestLogin(QString id, QString password){
     //for synchronous execution
-    QEventLoop eventLoop;
     QByteArray postData;
     postData.append("id=" + id +"&");
     postData.append("password=" + password);
+    return sendPostRequest(QString("/login/requestLogin"),postData);
+}
+
+bool LoginRequester::sendPostRequest(QString& directory, QByteArray& postData){
+    QString requestUrl = serverUrl + directory;
     request.setUrl(requestUrl);
     reply = manager->post(request,postData);
+
+    QEventLoop eventLoop;
     connect(manager,SIGNAL(finished(QNetworkReply*)), &eventLoop,SLOT(quit()));
 
     qDebug()<<"wait for answer";

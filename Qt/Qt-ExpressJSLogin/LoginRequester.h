@@ -15,7 +15,9 @@ private:
     QNetworkAccessManager * manager;
     QNetworkRequest request;
     QNetworkReply * reply;
-    QString requestUrl;
+    QString serverUrl;
+
+    bool sendPostRequest(QString& directory, QByteArray& postData);
 
     //singleton pattern
     LoginRequester();
